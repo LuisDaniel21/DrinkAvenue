@@ -181,8 +181,8 @@
                     { id: 'c3', title: 'Margarita', price: 'RD$450', description: 'Equilibrio perfecto de Tequila premium, triple sec y zumo de lima fresca con borde de sal.', ingredients: ['Tequila', 'Triple Sec', 'Lima', 'Sal'], image: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=800&auto=format&fit=crop' },
                     { id: 'c4', title: 'Gin Tonic', price: 'RD$475', description: 'Gin premium con tónica botánica, aromatizado con bayas de enebro, pepino o cítricos según tu elección.', ingredients: ['Gin', 'Agua Tónica', 'Botánicos', 'Pepino/Limón'], image: 'https://images.unsplash.com/photo-1523905330026-b8bd1f5f320e?q=80&w=800&auto=format&fit=crop' },
                     { id: 'c5', title: 'Sangría Tinta', price: 'RD$400', description: 'Nuestra mezcla de la casa con vino tinto seleccionado, frutas de temporada picadas y un toque secreto de brandy.', ingredients: ['Vino Tinto', 'Frutas mixtas', 'Brandy', 'Especias'], image: 'https://lh3.googleusercontent.com/d/18u8UePGr1-okG4YVok4OJ8F42tQLk-24' },
-                    { id: 'c6', title: 'Mojitos Avenue', price: 'RD$425', description: 'Refrescante mezcla de ron blanco, menta fresca del huerto, azúcar de caña y soda.', ingredients: ['Ron Blanco', 'Menta', 'Lima', 'Soda'], image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop' },
-                    { id: 'c7', title: 'Corona Colada', price: 'RD$550', description: 'Piña colada cremosa servida con una cerveza Corona invertida.', ingredients: ['Ron', 'Piña', 'Coco', 'Cerveza Corona'], image: 'https://lh3.googleusercontent.com/d/11rxlgt369qjrBlRqwigG2FaDCUWM2M4I' },
+                    { id: 'c6', title: 'Mojitos Avenue', price: 'RD$425', description: 'Ron blanco, menta fresca del huerto, azúcar de caña y soda.', ingredients: ['Ron Blanco', 'Menta', 'Lima', 'Soda'], image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop' },
+                    { id: 'c7', title: 'Corona Colada', price: 'RD$550', description: 'La experiencia definitiva: Piña colada cremosa servida con una cerveza Corona invertida.', ingredients: ['Ron', 'Piña', 'Coco', 'Cerveza Corona'], image: 'https://lh3.googleusercontent.com/d/11rxlgt369qjrBlRqwigG2FaDCUWM2M4I' },
                     { id: 'c8', title: 'Avenue Cocktail', price: 'RD$500', description: 'Vodka premium, puré de frutos rojos, notas cítricas y un toque de espumante.', ingredients: ['Vodka', 'Frutos Rojos', 'Cítricos', 'Espumante'], image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=600&auto=format&fit=crop' },
                     { id: 'c9', title: 'Negroni', price: 'RD$475', description: 'Para paladares exigentes: Partes iguales de Gin, Campari y Vermouth Rosso sobre hielo cristalino.', ingredients: ['Gin', 'Campari', 'Vermouth Rosso', 'Naranja'], image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?q=80&w=600&auto=format&fit=crop' },
                     { id: 'bz1', isBuzzBallz: true, title: 'BuzzBallz Tequila Rita', price: 'RD$350', description: 'El clásico sabor de la margarita en una presentación divertida. Mezcla de tequila, triple seco y lima fresca.', ingredients: ['Tequila', 'Lima', 'Triple Seco'], image: 'https://images.heb.com/is/image/HEBGrocery/001476906?fit=constrain,1&wid=800&hei=800&fmt=jpg' },
@@ -235,7 +235,7 @@
 
             const currentCategoryData = MENU_DATA.find(cat => cat.id === activeCategory);
 
-            // Splash Screen
+            // Splash Screen Estilo Android 16
             if (showSplash) {
                 return (
                     <div className="fixed inset-0 z-[200] bg-black flex flex-col items-center justify-center animate-fade-in">
@@ -270,7 +270,7 @@
                                 )}
                             </div>
 
-                            <h1 className="text-4xl md:text-6xl font-black text-yellow-500 uppercase tracking-tighter mb-4 leading-none italic">
+                            <h1 className="text-4xl md:text-6xl font-black text-yellow-500 uppercase tracking-tighter mb-4 leading-none">
                                 Drink Avenue
                             </h1>
                             <p className="text-neutral-400 text-xs md:text-sm font-bold uppercase tracking-[0.3em] mb-12 animate-pulse-soft">
@@ -302,7 +302,7 @@
                     {/* Barra de Estado Superior */}
                     <div className="fixed top-0 w-full z-50 py-1.5 flex justify-center items-center gap-2 status-bar">
                         <div className={`flex items-center gap-2 bg-neutral-900/70 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/5 shadow-2xl transition-all duration-1000`}>
-                            <div className={`w-2 h-2 rounded-full ${isClosed ? 'bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.8)]' : 'bg-green-500 shadow-[0_0_12px_rgba(34,197,94,0.6)]'} animate-status-fluid`}></div>
+                            <div className={`w-2 h-2 rounded-full ${isClosed ? 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]' : 'bg-green-500 shadow-[0_0_12px_rgba(34,197,94,0.6)]'} animate-status-fluid`}></div>
                             <span className="text-[8px] font-black uppercase tracking-[0.2em] text-neutral-200">
                                 Estado: {isClosed ? 'Cerrado' : 'Abierto'}
                             </span>
@@ -392,15 +392,15 @@
                         </section>
                     </main>
 
-                    {/* VISTA DE DETALLES INMERSIVA */}
+                    {/* VISTA DE DETALLES INMERSIVA - OPTIMIZADA MOBILE */}
                     {selectedItem && (
-                        <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-6 bg-neutral-950/95 backdrop-blur-xl animate-fade-in">
-                            <div className="bg-neutral-900 w-full max-w-4xl md:h-[650px] md:rounded-[3rem] overflow-hidden shadow-2xl border border-neutral-800/50 flex flex-col md:flex-row relative animate-slide-up h-full">
+                        <div className="fixed inset-0 z-[100] flex items-end md:items-center justify-center p-0 md:p-6 bg-neutral-950/95 backdrop-blur-xl animate-fade-in">
+                            <div className="bg-neutral-900 w-full max-w-4xl md:h-[650px] md:rounded-[3rem] overflow-hidden shadow-2xl border-t md:border border-neutral-800/50 flex flex-col md:flex-row relative animate-slide-up h-[95vh] md:h-auto rounded-t-[3.5rem] md:rounded-b-[3rem]">
                                 
-                                {/* Columna Izquierda: Imagen */}
-                                <div className="relative w-full h-[45%] md:h-full md:w-1/2 flex-shrink-0 overflow-hidden">
+                                {/* Columna Izquierda: Imagen (Ocupa media pantalla en PC, top en móvil) */}
+                                <div className="relative w-full h-[40%] md:h-full md:w-1/2 flex-shrink-0 overflow-hidden">
                                     <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-full object-cover" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-black/20 md:hidden"></div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-black/30"></div>
                                     
                                     {selectedItem.isBuzzBallz && (
                                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 bg-white/90 backdrop-blur-md rounded-full p-2 border border-white/20 shadow-2xl flex items-center justify-center">
@@ -408,47 +408,52 @@
                                         </div>
                                     )}
 
-                                    <button onClick={() => setSelectedItem(null)} className="absolute top-6 left-6 p-3 bg-neutral-950/60 backdrop-blur-lg rounded-full text-white hover:bg-yellow-500 hover:text-neutral-950 transition-all flex items-center gap-2 pr-5 font-bold text-xs border border-white/10 shadow-lg">
+                                    {/* Botón Volver (Estilo Floating en móvil) */}
+                                    <button onClick={() => setSelectedItem(null)} className="absolute top-8 left-8 p-3.5 bg-neutral-950/60 backdrop-blur-xl rounded-full text-white hover:bg-yellow-500 hover:text-neutral-950 transition-all flex items-center gap-2 pr-6 font-black text-[11px] uppercase tracking-widest border border-white/10 shadow-2xl">
                                         <ArrowLeft className="w-4 h-4" /> Volver
                                     </button>
                                 </div>
 
-                                {/* Columna Derecha: Información Detallada */}
-                                <div className="w-full md:w-1/2 flex flex-col h-[55%] md:h-full bg-neutral-900 p-8 md:p-14 overflow-y-auto no-scrollbar relative">
+                                {/* Columna Derecha: Información Detallada (Superpuesta en móvil) */}
+                                <div className="w-full md:w-1/2 flex flex-col h-[60%] md:h-full bg-neutral-900 p-8 md:p-14 overflow-y-auto no-scrollbar relative -mt-10 md:mt-0 rounded-t-[3.5rem] md:rounded-t-none">
+                                    {/* Botón cerrar discreto para PC */}
                                     <button onClick={() => setSelectedItem(null)} className="hidden md:flex absolute top-8 right-8 p-3 bg-neutral-800/50 hover:bg-red-500/20 hover:text-red-500 rounded-full transition-all text-neutral-400">
                                         <X className="w-6 h-6" />
                                     </button>
 
-                                    <div className="flex flex-col h-full">
+                                    <div className="flex flex-col h-full pt-2 md:pt-0">
+                                        {/* Pull indicator visual para móvil */}
+                                        <div className="w-12 h-1.5 bg-neutral-800 rounded-full mx-auto mb-8 md:hidden opacity-50"></div>
+
                                         <div className="mb-8">
-                                            {/* PUNTO ROJO ELIMINADO AQUÍ */}
-                                            <div className="flex items-center gap-2 mb-3 h-4">
+                                            <div className="flex items-center gap-2 mb-3">
                                                 {selectedItem.isBuzzBallz && (
-                                                    <span className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 font-black">
-                                                        BuzzBallz Special
+                                                    <span className="text-[10px] uppercase font-black bg-yellow-500 text-neutral-950 px-3 py-1 rounded-full tracking-[0.2em] shadow-lg shadow-yellow-500/10">
+                                                        BuzzBallz
                                                     </span>
                                                 )}
+                                                <div className={`w-2 h-2 rounded-full ${isClosed ? 'bg-red-500' : 'bg-green-500'} animate-status-fluid`}></div>
                                             </div>
                                             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-4 text-white">
                                                 {selectedItem.title}
                                             </h2>
-                                            <div className="text-4xl font-black text-yellow-500 tracking-tighter">
+                                            <div className="text-4xl font-black text-yellow-500 tracking-tighter italic">
                                                 {selectedItem.price}
                                             </div>
                                         </div>
 
                                         <div className="flex-grow">
-                                            <p className="text-neutral-400 text-base md:text-lg leading-relaxed mb-10 font-medium">
+                                            <p className="text-neutral-400 text-base md:text-lg leading-relaxed mb-10 font-medium border-l-2 border-yellow-500/10 pl-5">
                                                 {selectedItem.description}
                                             </p>
 
                                             <div className="space-y-5">
-                                                <h4 className="text-xs uppercase tracking-[0.2em] text-neutral-500 font-black flex items-center gap-2">
-                                                    <Info className="w-4 h-4" /> Composición del plato
+                                                <h4 className="text-[11px] uppercase tracking-[0.3em] text-neutral-500 font-black flex items-center gap-2">
+                                                    <Info className="w-4 h-4" /> Composición
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2.5">
                                                     {selectedItem.ingredients.map((ing, idx) => (
-                                                        <span key={idx} className="px-5 py-2.5 bg-neutral-800/40 rounded-2xl text-[11px] font-bold border border-neutral-700/30 text-neutral-200 uppercase tracking-widest">
+                                                        <span key={idx} className="px-5 py-2.5 bg-neutral-800/40 rounded-2xl text-[10px] font-bold border border-neutral-700/30 text-neutral-200 uppercase tracking-widest">
                                                             {ing}
                                                         </span>
                                                     ))}
@@ -457,7 +462,6 @@
                                         </div>
 
                                         <div className="mt-12 md:mt-16 pt-8 border-t border-neutral-800/40">
-                                            {/* BOTÓN ACTUALIZADO: ELIMINADO "CONFIRMAR" Y AGREGADO "VOLVER AL MENÚ" */}
                                             <button onClick={() => setSelectedItem(null)} className="w-full py-5 bg-yellow-500 text-neutral-950 font-black rounded-3xl uppercase tracking-[0.2em] hover:bg-yellow-400 transition-all flex items-center justify-center gap-3 shadow-xl shadow-yellow-500/10 text-sm">
                                                 Volver al Menú
                                             </button>
@@ -527,7 +531,7 @@
 
                             <div className="pt-8 border-t border-neutral-900/50 flex flex-col md:flex-row justify-between items-center gap-4">
                                 <p className="text-[9px] text-neutral-700 font-black uppercase tracking-[0.2em]">
-                                    © 2026 Drink Avenue. Todos los derechos reservados. Desarrollado por LDO Solutions.
+                                    © 2026 Drink Avenue Kitchen. Todos los derechos reservados.
                                 </p>
                                 <div className="flex gap-4">
                                     <div className="h-0.5 w-12 bg-yellow-500/20 rounded-full overflow-hidden">
